@@ -12,7 +12,7 @@ COMMIT;
 SELECT * FROM ex2;
 
 -- 새로운 칼럼명 추가(ALTER): 입사일 칼럼 추가
-ALTER TABLE ex2 ADD hire_date VARCHAR(20);
+ALTER TABLE ex2 ADD hire_date VARCHAR2(20);
 
 -- 테이블 삭제(DROP)
 DROP TABLE ex2;
