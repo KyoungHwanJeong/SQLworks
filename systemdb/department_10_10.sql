@@ -15,6 +15,7 @@ VALUES (30, '마케팅팀', '수원');
 
 
 -- 특정 칼럼 검색(자료 검색)
+
 SELECT deptid, deptname FROM department;
 
 -- 모든 칼럼 검색('*'을 사용한다)
