@@ -1,7 +1,7 @@
 -- bookmall 구축
 -- book 테이블 생성
 CREATE TABLE book(
-    bookid  NUMBER PRIMARY KEY,
+    bookid      NUMBER PRIMARY KEY,
     bookname    VARCHAR2(60) NOT NULL,
     publisher   VARCHAR2(60) NOT NULL,
     price       NUMBER NOT NULL
@@ -67,6 +67,39 @@ ORDER BY bookname ASC;
 SELECT * FROM book
 ORDER BY price ASC, bookname DESC;
 
+-- 출판사가 '굿스포츠' 또는 '대한미디어'인 도서를 검색하시오
+SELECT * FROM book
+WHERE publisher = '굿스포츠' OR publisher = '대한미디어';
+
+-- 출판사가 '굿스포츠' 또는 '대한미디어'인 도서를 검색하시오
+-- IN() 함수 사용
+SELECT * FROM book
+WHERE publisher IN('굿스포츠', '대한미디어');
+
+-- 출판사가 '굿스포츠' 또는 '대한미디어'인 도서를 제외하고 검색하시오
+-- NOT IN() 함수 사용
+SELECT * FROM book
+WHERE publisher NOT IN('굿스포츠', '대한미디어');
+
+
+-- 가격이 13000원인 도서를 검색하시오( =, LIKE)
+SELECT * FROM book
+WHERE price = 13000
+ORDER BY price ASC;
+
+-- 가격이 13000원이 아닌 도서를 검색하시오( <>, NOT LIKE, != )
+SELECT * FROM book
+WHERE price <> 13000
+ORDER BY price ASC;
+
+-- 가격이 13000원이 아닌 도서를 검색하시오( <>, NOT LIKE, != )
+SELECT * FROM book
+WHERE price != 13000
+ORDER BY price ASC;
+
+-- 도서 이름에 '축구'가 포함되지 않은 출판사를 검색하시오.
+SELECT bookname, publisher FROM book
+WHERE bookname NOT LIKE '%축구%';
 
 -- 트랜젝션
 COMMIT;
