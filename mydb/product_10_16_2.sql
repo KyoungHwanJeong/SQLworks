@@ -22,7 +22,7 @@ VALUES('100001', '무소음 무선 마우스', 25000);
 INSERT INTO product_2(product_code, product_name, price)
 VALUES('100002', '기계식 게이밍 키보드', 30000);
 INSERT INTO product_2(product_code, product_name, price)
-VALUSE('100003', '무결점 패널 광시야각 모니터', 120000)
+VALUES('100003', '무결점 패널 광시야각 모니터', 120000);
 
 
 
