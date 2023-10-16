@@ -26,6 +26,7 @@ INSERT INTO product(product_code, product_name, price)
 VALUES ('100003', '무결점 패널 광시야각 모니터',  120000);
 
 COMMIT;
+SELECT * FROM product;
 
 -- 상품의 총 개수 및 상품 가격의 평균을 구하시오
 -- COUNT(), SUM(), AVG()
