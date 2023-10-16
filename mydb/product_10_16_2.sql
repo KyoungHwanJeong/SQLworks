@@ -24,8 +24,19 @@ VALUES('100002', '기계식 게이밍 키보드', 30000);
 INSERT INTO product_2(product_code, product_name, price)
 VALUES('100003', '무결점 패널 광시야각 모니터', 120000);
 
-
-
-
-
+COMMIT;
 SELECT * FROM product_2;
+
+-- 문제
+-- 1. 상품의 총 개수 및 상품 가격의 평균을 구하시오(평균가격은 백원 단위로 반올림하기)
+SELECT  COUNT(*) 상품의총개수, 
+        ROUND(AVG(price), -2) 평균가격 
+FROM product_2;
+
+-- 2. 상품 중에서 마우스 이름과 가격 검색하기
+SELECT product_name, price FROM product_2
+WHERE product_name LIKE '%마우스%';
+
+-- 3. 상품을 가격순으로 정렬하시오 (내림차순)
+SELECT * FROM product_2
+ORDER BY price DESC;
