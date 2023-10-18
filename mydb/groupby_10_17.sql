@@ -1,3 +1,14 @@
+/*
+
+--1. '1002'번 부서 이름을 '총무팀'으로 변경하기
+--2. 부서별 급여 총액을 구하시오
+--3. 부서 이름과 부서별 급여 총액을 출력하시오
+--4. 부서 이름과 부서별 급여 총액을 출력하시오(ROLLUP을 이용해서)
+--5. 부서 이름과 부서별 급여 총액을 출력하시오(CUBE를 이용해서)
+--6. 직원 이름과 월급, 월급의 총합을 출력하시오
+--7. '강태양'의 급여를 3000000원으로 변경하기
+--8. 직원 이름과 월급, 월급의 총합, 순위는 월급이 많은 순서로 순위를 매겨서 출력하시오
+*/
 -- department 테이블 생성
 CREATE TABLE department(
     deptno      VARCHAR2(4) PRIMARY KEY,
@@ -25,6 +36,9 @@ INSERT INTO employee VALUES (102,'박달', 3000000, SYSDATE, '1002');
 INSERT INTO employee VALUES (103,'강태양', 3500000, SYSDATE, '1000');
 INSERT INTO employee VALUES (104,'최우주', 5000000, SYSDATE, '1001');
 INSERT INTO employee VALUES (105,'우영우', 4000000, SYSDATE, '1002');
+
+SELECT * FROM department;
+SELECT * FROM employee;
 
 -- '1002'번 부서 이름을 '총무팀'으로 변경하기
 UPDATE department SET deptname = '총무팀'
@@ -85,3 +99,4 @@ FROM employee;
 COMMIT;
 SELECT * FROM employee;
 DROP TABLE department;
+DROP TABLE employee;

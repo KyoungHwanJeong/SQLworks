@@ -19,6 +19,9 @@ WHERE ano = '11-11-111';
 COMMIT;
 SELECT * FROM account;
 
+SELECT * FROM account
+WHERE ano = '11-11-111' AND owner '¡§∞Ê»Ø' AND balance 10000;
+
 drop table account;
 ROLLBACK;
 TRUNCATE TABLE account;

@@ -95,4 +95,6 @@ FROM emp_2;
 --10. 급여가 가장 많은 사원과 급여가 가장 적은 사원의 이름과 급여를 검색하시오(서브쿼리)
 SELECT empname, salary
 FROM emp_2
-WHERE salary = (SELECT MAX(salary) FROM emp_2) OR salary = (SELECT MIN(salary) FROM emp_2);
+WHERE salary = (SELECT MAX(salary) FROM emp_2) 
+    OR salary = (SELECT MIN(salary) FROM emp_2);
+    
