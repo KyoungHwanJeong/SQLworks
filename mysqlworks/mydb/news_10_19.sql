@@ -2,11 +2,11 @@
 use mydb;			-- 사용할 db
 -- news 테이블 생성
 CREATE TABLE news(
-	aid			INT PRIMARY KEY AUTO_INCREMENT,
-    title		VARCHAR(100) NOT NULL,
-    content		TEXT NOT NULL,
-    create_date	TIMESTAMP DEFAULT now(),
-    img			VARCHAR(40)
+	aid			INT PRIMARY KEY AUTO_INCREMENT, -- 기사글번호(article id)
+    title		VARCHAR(100) NOT NULL,			-- 제목
+    content		TEXT NOT NULL,					-- 내용
+    create_date	TIMESTAMP DEFAULT now(),		-- 등록일	
+    img			VARCHAR(40)						-- 이미지파일
 );
 
 INSERT INTO news(title, content, img) 	-- auto_increment : 일련번호, 시퀀스
@@ -15,8 +15,11 @@ INSERT INTO news(title, content, img)
 VALUES('정치 뉴스', '이스라엘과 팔레스타인 전쟁', 'war.jpg');
 INSERT INTO news(title, content, img) 
 VALUES('스포츠 뉴스', '한국과 베트남 축구 성적 - 6:0', 'soccer.jpg');
+INSERT INTO news(title, content, img) 
+VALUES('과학 뉴스', '협동로봇, 청소 서비스로봇', 'robot.png');
 
-SELECT * FROM news;
+
+SELECT * FROM news ORDER BY create_date DESC;
 
 
 -- 등록 시간 순으로 정렬하시오(최근 등록일이 위로 올라가게)
