@@ -10,5 +10,6 @@ create table t_member(
     age int
 );
 
+commit;
 select* from t_member;
 truncate t_member;
