@@ -3,3 +3,5 @@ use sys;
 
 show tables;
 select * from sys_config;
+
+drop user springuser@localhost;
